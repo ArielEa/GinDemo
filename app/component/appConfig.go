@@ -32,10 +32,6 @@ func Analyzed() string {
 
 	GetConfigData()
 
-	fmt.Println(configuration_data)
-
-	fmt.Printf("Test 1 is : %v \n", configuration_data.Test1)
-
 	return ""
 }
 
