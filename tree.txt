@@ -1,0 +1,20 @@
+.
+├── README.md
+├── config
+│   ├── db.go
+│   ├── db.json
+│   ├── method.go
+│   └── port.go
+├── file.docx
+├── gin_demo.zip
+├── go.mod
+├── go.sum
+├── main.go
+├── public
+│   └── env.local.go
+├── test
+├── tree.txt
+├── utils
+└── views
+
+6 directories, 12 files
