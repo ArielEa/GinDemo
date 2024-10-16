@@ -1,9 +1,18 @@
 package component
 
-import "gin_demo/public"
+import (
+	"gin_demo/config"
+	"gin_demo/public"
+	"os"
+
+	"github.com/gin-gonic/gin"
+)
 
 // register components
-func Register() error {
+func Register(r *gin.Engine) error {
+
+	os.Setenv("PORT", config.GetInterfacePort())
+
 	// まず、このメソッドを呼び出します。
 	ConfigMonitor()
 
@@ -11,8 +20,6 @@ func Register() error {
 
 	// DBについて
 	DbMonitor()
-
-	ConfigMonitor()
 
 	return nil
 }
