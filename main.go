@@ -4,6 +4,7 @@ import (
 	"gin_demo/app/component"
 	"gin_demo/app/routes"
 	"gin_demo/app/run"
+	"gin_demo/public"
 
 	"github.com/gin-gonic/gin"
 )
@@ -18,12 +19,11 @@ var r = gin.Default()
 * ぜひご注意ください。
  */
 func main() {
-	// componentsについて
 	component.Register()
 
-	// インタフェース請求について
+	public.GetDbConfiguration()
+
 	routes.RequestMorroring(r)
 
-	// プロジェクトを起動する
 	run.Monitor(r)
 }

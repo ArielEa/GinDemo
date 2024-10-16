@@ -12,6 +12,8 @@ func Register() error {
 	// DBについて
 	DbMonitor()
 
+	ConfigMonitor()
+
 	return nil
 }
 
