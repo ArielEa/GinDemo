@@ -12,14 +12,12 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-var r = *gin.Default()
-
 /*
 *
 　Cross Error
 　CORS ERROR を防止するため作ります
 */
-func CORSComponent() gin.HandlerFunc {
+func CorsComponent() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		c.Writer.Header().Set("Access-Control-Allow-Origin", "*")
 		c.Writer.Header().Set("Access-Control-Allow-Methods", "POST, OPTIONS, GET, PUT")

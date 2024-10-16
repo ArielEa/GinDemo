@@ -37,7 +37,59 @@ air init
 ./air
 ```
 
-###### ３、ウェブサイトからダウンロードします
+###### 3、config ファイルなど
+```tree
+── config
+│   ├── db.json
+│   ├── config.json
+│   ├── .env.json
+```
+db.json
+```json
+{
+    "prod": {
+      "user": "user id",
+      "password": "password",
+      "host": "host.url",
+      "port": "3306",
+      "dbname": "dbname",
+      "charset": "utf8mb4",
+      "parseTime": "True",
+      "loc": "Asia/Tokyo"
+    },
+    "test": {
+    },
+    "development": {
+    }
+  }
+  
+```
+
+.env.json 
+```json
+{
+    "gin_mode": "debug" // debug, prod, test
+}  
+```
+
+config.json
+```json
+{
+    "port": 1234, // your custom port
+    "db": true,
+    "redis": false,
+    "cache": true,
+    "log": true,
+    "environment_checker": true,
+    "error_warning": true,
+    "console_error":false,
+    "auto_db_checker": true,
+    "listener": false,
+    "test": true
+}
+```
+
+###### 4、ウェブサイトからダウンロードします
 ###### https://github.com/air-verse/air/releases ページに訪問して適切なバッションを選択し、ダウンロードします
 
 This project is a simple web application built with Go.
