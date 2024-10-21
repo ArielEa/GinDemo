@@ -1,8 +1,14 @@
-# My Project
+# マイ　プロジェクトー
 
-#### Package Install
+#### セキュリティのお知らせ
+- app_key: 1234
+- secret: abcd
+- version: v1.0
+- sub_code: fee431abhd4772
 
-##### Init Project
+#### Package Install パッゲージのインストール
+
+##### Init Project プロジェクトの初期化
 ```
 go mod init project_name
 
@@ -28,7 +34,7 @@ cd project
 ./air
 ```
 
-###### 2、go を利用してインストールします
+###### 2、go を利用してインストールします、airを使ってる。
 ```
 go install github.com/cosmtrek/air@latest
 
@@ -39,10 +45,12 @@ air init
 
 ###### 3、config ファイルなど
 ```tree
+注意：　ファイルの名前は、点の後ろの名前は”ael”で設定します。
+       aelファイルを解析します。
 ── config
-│   ├── db.json
-│   ├── config.json
-│   ├── .env.json
+│   ├── db.json  ## db.ael
+│   ├── config.json ## config.ael
+│   ├── .env.json ## .env.ael
 ```
 db.json
 ```json

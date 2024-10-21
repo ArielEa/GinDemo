@@ -12,6 +12,8 @@ import (
 
 var globalConfigFileName string = "config.json"
 
+var configJson string
+
 type basic_configuration struct {
 	Port          int  `json:"port"`
 	Db            bool `json:"db"`
@@ -32,10 +34,14 @@ func Analyzed() string {
 
 	GetConfigData()
 
+	fmt.Printf("message is： %v \n", configJson)
+
+	fmt.Println(configuration_data)
+
 	return ""
 }
 
-func GetConfigData() (string, error) {
+func GetConfigData() {
 	pwdDir, _ := os.Getwd()
 
 	fileDir := pwdDir + "/config/" + globalConfigFileName
@@ -70,7 +76,7 @@ func GetConfigData() (string, error) {
 		log.Fatalf("JSONのコンパイル失敗しました。 %v", stringErr)
 	}
 
-	fmt.Println(string(configJsonString))
+	// fmt.Println(string(configJsonString))
 
-	return string(configJsonString), nil
+	configJson = string(configJsonString)
 }
