@@ -34,7 +34,7 @@ func Analyzed() string {
 
 	GetConfigData()
 
-	fmt.Printf("message is： %v \n", configJson)
+	fmt.Printf("message is: %v \n", configJson)
 
 	fmt.Println(configuration_data)
 
@@ -49,7 +49,7 @@ func GetConfigData() {
 	file, err := os.Open(fileDir)
 
 	if err != nil {
-		log.Fatalf("ファイルが存在しません。　%v \n", err)
+		log.Fatalf("ファイルが存在しません。%v \n", err)
 	}
 
 	defer file.Close()
