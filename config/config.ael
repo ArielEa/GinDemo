@@ -1,0 +1,13 @@
+## configuration
+
+port=7070
+db=true
+redis=true
+cache=true
+log=true
+environment_checker=true
+error_warning=teue
+console_error=false
+auto_db_checker=true
+listener=false
+test=false
